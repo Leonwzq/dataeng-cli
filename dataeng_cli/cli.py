@@ -65,7 +65,7 @@ def sync(source: str, since: str, mock: bool, schedule_mode: bool):
     
     def do_sync():
         console.print(f"[cyan]开始同步 [{source}] 数据，当前 Watermark: {watermark}[/cyan]")
-        query = f"(created:[{watermark} TO *])" if not mock else "insulin"
+        query = f"(date_modified:[{watermark} TO *])" if not mock else "insulin"
         
         if mock:
             raw_data = generate_mock_uniprot_data("sync_query")
