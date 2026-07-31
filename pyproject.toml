@@ -16,3 +16,6 @@ dependencies = [
 
 [project.scripts]
 dataeng-cli = "dataeng_cli.cli:main"
+[tool.setuptools.packages.find]
+include = ["dataeng_cli*"]
+exclude = ["data*", "tests*"]
