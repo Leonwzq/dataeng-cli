@@ -6,7 +6,7 @@ class DataValidator:
     def __init__(self, data_dir: Path):
         self.data_dir = data_dir
 
-    def validate((self) -> Dict[str, Any]:
+    def validate(self) -> Dict[str, Any]:
         """对处理后的数据目录实施结构化质量校验"""
         if not self.data_dir.exists() or not self.data_dir.is_dir():
             return {
